@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Вхід</title>
+  </head>
+  <body>
+    <section class="login_form">
+      <div class="pop-up hidden" id="popUp">
+        <div class="pop-up-content">
+          <button
+            type="button"
+            class="close-button"
+            id="closeButton"
+            aria-label="Закрити"
+          >
+            &times;
+          </button>
+          <h3>Успіх</h3>
+          <p>Вхід виконано успішно!</p>
+          <div class="user-name" id="userName"></div>
+          <button type="button" class="close" id="closePopUp">Закрити</button>
+        </div>
+      </div>
+
+      <div class="login_card">
+        <h2>Вхід в акаунт</h2>
+        <p class="login_sub">Введіть свої дані, щоб продовжити</p>
+
+        <form novalidate>
+          <div class="input-group">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder=" "
+              autocomplete="given-name"
+            />
+            <label class="form-label" for="name">Ім'я</label>
+          </div>
+
+          <div class="input-group">
+            <input
+              type="text"
+              id="surname"
+              name="surname"
+              placeholder=" "
+              autocomplete="family-name"
+            />
+            <label class="form-label" for="surname">Прізвище</label>
+          </div>
+
+          <div class="input-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder=" "
+              autocomplete="email"
+            />
+            <label class="form-label" for="email">Email</label>
+          </div>
+
+          <div class="input-group input-group--password">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder=" "
+              autocomplete="current-password"
+            />
+            <label class="form-label" for="password">Пароль</label>
+            <button
+              type="button"
+              class="toggle-password"
+              id="toggleCheckbox"
+              aria-label="Показати пароль"
+              aria-pressed="false"
+            >
+              <svg
+                class="icon-eye"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.5 12S5 5 12 5s10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12Z"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="3"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                />
+              </svg>
+              <svg
+                class="icon-eye-off"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 3l18 18M10.6 10.7a3 3 0 0 0 4.2 4.2M6.6 6.9C4.1 8.4 2.5 10.6 1.5 12c0 0 3.5 7 10.5 7 1.9 0 3.5-.4 4.9-1.1M9.6 5.2A11.6 11.6 0 0 1 12 5c7 0 10.5 7 10.5 7-.5 1-1.4 2.3-2.7 3.6"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <button class="button-login" type="submit">Увійти</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
